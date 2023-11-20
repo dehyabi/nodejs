@@ -1,7 +1,9 @@
 const http = require('http');
 
 const server = http.createServer(function (req, res) {
- res.end("Hi, Welcome to NodeJS");
+ res.writeHead(200, {'Content-Type': 'text/html'});
+ res.write('Hello <b>World</b>!');
+ res.end();
 });
 
 server.listen(8000);
